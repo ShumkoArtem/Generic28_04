@@ -1,10 +1,10 @@
 package tasks;
 
+import java.io.IOException;
 import java.util.Arrays;
-import java.util.Comparator;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         /**
          * Задача 2
@@ -69,8 +69,20 @@ public class Main {
          * ■ поиск максимального и минимального элемента;
          * ■ расчет среднего значения;
          */
+
+        Matrix matrix = new Matrix(); //создаем объект типа Matrix
+        matrix.setArray(); // заполняем матрици выбранным типом
+        System.out.println("Matrix №1");
+        matrix.printMatrix(matrix.getArray());
+        System.out.println("Matrix №2");
+        matrix.printMatrix(matrix.getArray2());
+        // метод сумирует, отнимает, умножает и делит значения в матрице
+        matrix.newMatrix(matrix.getArray(), matrix.getArray2());
+
+
     }
 
+    //Task 4
     public static <E> E maxValueArray(E[] arr) {
 
         E max = null;
